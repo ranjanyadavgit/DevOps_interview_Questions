@@ -153,6 +153,25 @@ Parallel deployments → deploy to multiple regions at once.
 
 Sequential deployments → deploy to one region, run health checks, then promote to next.
 
+terraform/
+├── modules/
+│   ├── vpc/
+│   ├── ecs/
+│   ├── rds/
+│   └── s3/
+├── envs/
+│   ├── dev/
+│   │   ├── us-east-1.tfvars
+│   │   └── main.tf
+│   ├── stage/
+│   │   ├── us-east-1.tfvars
+│   │   └── ap-south-1.tfvars
+│   └── prod/
+│       ├── us-east-1.tfvars
+│       └── ap-south-1.tfvars
+└── backend.tf
+
+
 Terraform Multi-Region Setup
 --
 
